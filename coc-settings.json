@@ -1,0 +1,8 @@
+{
+  "jedi": {
+    "enable": true,
+    "startupMessage": false,
+    "executable.command": "~/.local/bin/jedi-language-server"
+  }
+}
+
