@@ -1,3 +1,4 @@
+vim.o.wrap = false
 vim.opt.mouse = 'a'
 vim.opt.number = true
 vim.opt.swapfile = false
