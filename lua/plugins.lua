@@ -15,4 +15,15 @@ packer.startup(function(use)
     use 'lambdalisue/nerdfont.vim'
     use 'neoclide/coc.nvim'
     use 'github/copilot.vim'
-end)
+    use 'IogaMaster/neocord'
+    use 'arcticicestudio/nord-vim'
+    use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+}
+    end)
+
+
