@@ -1,8 +1,5 @@
-vim.o.wrap = false
-vim.opt.mouse = 'a'
-vim.opt.number = true
-vim.opt.swapfile = false
-vim.opt.clipboard = 'unnamedplus'
+require('core.options')
+require('core.keymaps')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

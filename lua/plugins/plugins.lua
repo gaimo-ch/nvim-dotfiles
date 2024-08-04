@@ -1,9 +1,6 @@
 return {
-  {
+ {
     'lambdalisue/fern.vim',
-    keys = {
-      { "<C-f>", ":Fern . -reveal=% -drawer -toggle -width=40<CR>", desc = "toggle fern" },
-    },
     dependencies = {
       { 'lambdalisue/nerdfont.vim' },
       {
@@ -17,6 +14,7 @@ return {
   },
   {
     'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
       require('lualine').setup {
         options = {
@@ -61,4 +59,20 @@ return {
         require'alpha'.setup(require'alpha.themes.startify'.config)
     end
   },
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+    {
+    'sindrets/diffview.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+    config = function()
+      require('diffview').setup {}
+    end,
+    keys = {
+      { "<leader>gd", ":DiffviewOpen<CR>", desc = "Open diffview" },
+      { "<leader>gc", ":DiffviewClose<CR>", desc = "Close diffview" },
+    },
+  },
 }
+
