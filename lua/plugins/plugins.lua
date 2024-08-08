@@ -74,5 +74,8 @@ return {
       { "<leader>gc", ":DiffviewClose<CR>", desc = "Close diffview" },
     },
   },
+  {
+    'akinsho/toggleterm.nvim', version = "*", config = true,
+  },
 }
 
